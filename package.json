@@ -141,4 +141,25 @@
     "supertest": "^7.1.4",
     "vite": "^7.3.1"
   }
+,
+"main": "electron/main.js",
+"build": {
+  "appId": "com.yourname.homebrewery-local",
+  "productName": "Homebrewery Local",
+  "directories": {
+    "buildResources": "electron"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*"
+  ],
+  "mac": {
+    "category": "public.app-category.productivity"
+  },
+  "win": {
+    "target": ["nsis"]
+  },
+  "linux": {
+    "target": ["AppImage"]
+  }
 }
